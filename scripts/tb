@@ -2,7 +2,7 @@
 
 SCRIPT=$1
 
-TB_HOME=$HOME/.tb
+TB_HOME=$HOME/.local/tb
 
-bash $TB_HOME/tools/$SCRIPT
+bash $TB_HOME/$SCRIPT
 

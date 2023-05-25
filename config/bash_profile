@@ -1,5 +1,13 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
-export HOME_BIN=$HOME/.bin
+export HOME_BIN=$HOME/.local/bin
+
+REPO_CONFIG_DIR=./config
+REPO_SCRIPT_DIR=./scripts
+
+HOME_LOCAL_DIR=${HOME}/.local
+HOME_TB_DIR=${HOME_LOCAL_DIR}/tb
+HOME_BIN_DIR=${HOME_LOCAL_DIR}/bin
+HOME_BUILD_DIR=${HOME_LOCAL_DIR}/build
 
 # Colors
 green=$(tput setaf 2)
@@ -36,7 +44,6 @@ alias crb="RUST_BACKTRACE=1 cargo run"
 # Without it, I can run "clear" but still scroll back past the top
 alias clear="clear && printf '\e[3J'"
 alias cl="clear"
-
 . "$HOME/.cargo/env"
 
 neofetch
