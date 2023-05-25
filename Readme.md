@@ -2,3 +2,7 @@
 
 Run install.sh
 
+Prerequisites
+- git
+
+

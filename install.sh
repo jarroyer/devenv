@@ -7,11 +7,16 @@ echo "Installing .bash_profile"
 mv ${HOME}/.bash_profile ${HOME}/.bash_profile.bckp
 cp ${REPO_CONFIG_DIR}/bash_profile ${HOME}/.bash_profile
 
+# Drop in .files
+cp ${REPO_CONFIG_DIR}/inputrc ${HOME}/.inputrc
+cp ${REPO_CONFIG_DIR}/gitconfig ${HOME}/.gitconfig
+cp ${REPO_CONFIG_DIR}/hushlogin ${HOME}/.hushlogin
+
 # Make .dirs
-mkdir ${HOME_LOCAL_DIR}
-mkdir ${HOME_TB_DIR}
-mkdir ${HOME_BIN_DIR}
-mkdir ${HOME_BUILD_DIR}
+mkdir ${HOME_LOCAL_DIR} $2 >> /dev/null
+mkdir ${HOME_TB_DIR} $2 > /dev/null
+mkdir ${HOME_BIN_DIR} $2 > /dev/null
+mkdir ${HOME_BUILD_DIR} $2 > /dev/null
 
 # Copy tb scripts
 cp ${REPO_SCRIPT_DIR}/tb ${HOME_BIN_DIR}/tb
