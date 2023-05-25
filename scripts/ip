@@ -1,0 +1,3 @@
+#!/bin/bash
+#
+dig +short myip.opendns.com @resolver4.opendns.com

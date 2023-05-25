@@ -1,0 +1,42 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export HOME_BIN=$HOME/.bin
+
+# Colors
+green=$(tput setaf 2)
+blue=$(tput setaf 4)
+reset=$(tput sgr0)
+
+# Bash Prompt
+PS1="\[$green\]\u@\[$green\]\h\[$reset\]:\[$blue\]\w\[$reset\]\$ "
+
+# Highlight ls color
+export CLICOLOR=1
+alias ls='ls -G'
+alias ll='ls -lG'
+
+PATH="${PATH}:${HOME_BIN}"
+export PATH
+
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Misc Environment Variables
+EXTERNAL_IP=69.212.62.235
+HOMELAB_IP=69.212.62.235
+
+# Aliases
+alias dc="docker"
+alias nvimedit="nvim ~/.config/nvim/init.vim"
+alias vim="nvim"
+alias cr="cargo run"
+alias ct="cargo test"
+alias crb="RUST_BACKTRACE=1 cargo run"
+
+# This one clears the scrollback buffer
+# Without it, I can run "clear" but still scroll back past the top
+alias clear="clear && printf '\e[3J'"
+alias cl="clear"
+
+. "$HOME/.cargo/env"
+
+neofetch

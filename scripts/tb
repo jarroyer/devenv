@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SCRIPT=$1
+
+TB_HOME=$HOME/.tb
+
+bash $TB_HOME/tools/$SCRIPT
+
