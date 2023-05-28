@@ -47,4 +47,7 @@ alias cl="clear"
 . "$HOME/.cargo/env"
 
 echo
-neofetch
+FILE=${HOME_BIN_DIR}/neofetch
+if test -f "$FILE"; then
+    neofetch
+fi
