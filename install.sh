@@ -60,6 +60,22 @@ else
     make PREFIX=${HOME_LOCAL_DIR} install
 fi
 
+if which -s python; then
+    echo "Python exists, skipping install"
+else
+    echo "Installing python"
+    cd $HOME_BUILD_DIR
+    curl https://www.python.org/ftp/python/3.11.3/Python-3.11.3.tgz --output python3.tar.gz
+    tar -xzvf python3.tar.gz
+    cd Python-3.11.3
+    ./configure --prefix=${HOME_LOCAL_DIR} --enable-optimization
+    make install
+    cd $HOME_BIN_DIR
+    ln -s python3 python
+    chmod 711 python
+fi
+
+
 # Clean build dir
 echo "Cleaning up the build directory"
 cd $HOME_BUILD_DIR
