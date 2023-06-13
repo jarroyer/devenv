@@ -75,6 +75,14 @@ else
     chmod 711 python
 fi
 
+if which -s pip; then
+    echo "Pip exists, skipping install"
+else
+    echo "Installing pip"
+    cd $HOME_BIN_DIR
+    curl https://bootstrap.pypa.io/pip/pip.pyz --output pip.pyz
+fi
+
 
 # Clean build dir
 echo "Cleaning up the build directory"

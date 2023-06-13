@@ -39,6 +39,7 @@ alias vim="nvim"
 alias cr="cargo run"
 alias ct="cargo test"
 alias crb="RUST_BACKTRACE=1 cargo run"
+alias pip="python $HOME_BIN_DIR/pip.pyz"
 
 # This one clears the scrollback buffer
 # Without it, I can run "clear" but still scroll back past the top
