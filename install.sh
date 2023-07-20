@@ -11,6 +11,7 @@ cp ${REPO_CONFIG_DIR}/bash_profile ${HOME}/.bash_profile
 cp ${REPO_CONFIG_DIR}/inputrc ${HOME}/.inputrc
 cp ${REPO_CONFIG_DIR}/gitconfig ${HOME}/.gitconfig
 cp ${REPO_CONFIG_DIR}/hushlogin ${HOME}/.hushlogin
+cp ${REPO_CONFIG_DIR}/env ${HOME}/.env
 
 # Make .dirs
 mkdir ${HOME_LOCAL_DIR} 2> /dev/null

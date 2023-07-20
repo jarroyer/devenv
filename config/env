@@ -1,0 +1,13 @@
+export POLYGON_API_KEY="Vq6DZx1B3e_fv1gCQMAxmEWdkLP5s84i"
+export POLYGON_BASE_URL="https://api.polygon.io/v2/"
+
+# export MONGO_DB_HOST="test-cluster.4nvg43c.mongodb.net"
+
+export MONGO_DB_HOST="10.4.20.39:27017"
+export MONGO_DB_USER="dev-test"
+export MONGO_DB_PASSWORD="dev-test"
+export MONGO_DB_NAME="stock-database"
+export MONGO_DB_COLLECTION="daily-ochl"
+
+export SERVICE_REGISTRY_HOST="http://localhost"
+export SERVICE_REGISTRY_PORT="8081"

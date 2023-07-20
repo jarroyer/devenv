@@ -1,6 +1,8 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export HOME_BIN=$HOME/.local/bin
 
+source .env
+
 REPO_CONFIG_DIR=./config
 REPO_SCRIPT_DIR=./scripts
 
@@ -15,7 +17,9 @@ blue=$(tput setaf 4)
 reset=$(tput sgr0)
 
 # Bash Prompt
-PS1="\[$green\]\u@\[$green\]\h\[$reset\]:\[$blue\]\w\[$reset\]\$ "
+# PS1="\[$green\]\u@\[$green\]\h\[$reset\]:\[$blue\]\w\[$reset\]\$ "
+PS1="\[$grey\]\D{%H:%M:%S} \[$green\]\u@\h\[$reset\] \[$blue\]\w\[$reset\] $ "
+
 
 # Highlight ls color
 export CLICOLOR=1
