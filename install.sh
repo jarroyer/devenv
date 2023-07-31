@@ -1,5 +1,5 @@
 #!/bin/bash
-source config/bash_profile
+source config/bash_profile 2> /dev/null
 
 # Drop in bash_profile
 echo "Installing .bash_profile"
@@ -86,6 +86,7 @@ fi
 
 
 # Clean build dir
+echo
 echo "Cleaning up the build directory"
 cd $HOME_BUILD_DIR
 rm -rf ./*
